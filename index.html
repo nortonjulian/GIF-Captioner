@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Captioner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gif Captioner</h1>
+        <p>Create your on captioned GIFs</p>
+    </header>
+    <main>
+        <section id="upload">
+            <form id="gif-form">
+                <label for="gif-upload">Upload a GIF:</label>
+                <input type="file" id="gif-upload" accept="image/gif" required>
+                <span id="upload-error" class="error-message"></span>
+
+                <label for="caption-input">Add Caption:</label>
+                <input type="text" id="caption-input" placeholder="Enter your caption" required minlength="1" maxlength="50">
+                <span id="caption-error" class="error-message"></span>
+
+                <button type="submit">Generate Captioned GIF</button>
+            </form>
+        </section>
+
+        <section id="preview">
+            <h2>Preview Your GIF</h2>
+            <div id="gif-container">
+                <img id="gif-preview" src="" alt="The uploaded GIF will appear here.">
+                <p id="git-caption" class="caption"></p>
+            </div>
+        </section>
+
+        <section id="download">
+            <button id="download-gif" disabled>Downlad GIF</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
